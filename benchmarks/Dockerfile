@@ -16,4 +16,4 @@ EXPOSE 9999
 
 USER default
 
-ENTRYPOINT [ "python3", "server.py" ]
+ENTRYPOINT [ "python3", "-u", "server.py" ]
