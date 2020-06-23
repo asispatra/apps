@@ -26,7 +26,7 @@ print("Host:", host)
 port = 9999
 
 # bind to the port
-serversocket.bind((host, port))
+serversocket.bind(("0.0.0.0", port))
 
 # queue up to 5 requests
 serversocket.listen(5)
