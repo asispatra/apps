@@ -21,6 +21,7 @@ serversocket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
 # get local machine name
 host = socket.gethostname()
+print("Host:", host)
 
 port = 9999
 
