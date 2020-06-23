@@ -7,7 +7,7 @@ RUN yum install -y python38 && \
 #COPY ./server.py .
 #COPY ./ready_schbench.sh .
 
-RUN wget 
+RUN wget https://raw.githubusercontent.com/asispatra/asisapps/master/benchmarks/server.py -O server.py
 
 RUN git clone https://github.com/parthsl/schbench && cd schbench/schbench && make
 RUN git clone https://github.com/axboe/fio.git && cd fio && ./configure && make && make install
