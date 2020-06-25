@@ -1,7 +1,7 @@
 FROM registry.access.redhat.com/ubi8/s2i-base
 
 
-RUN yum install -y python38 libaio-devel && \
+RUN yum install -y python38 && \
     yum -y clean all --enablerepo='*'
 
 
