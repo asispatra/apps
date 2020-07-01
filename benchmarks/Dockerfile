@@ -9,8 +9,8 @@ RUN yum install -y python38 powerpc-utils https://dl.fedoraproject.org/pub/epel/
 RUN wget https://raw.githubusercontent.com/asispatra/asisapps/master/benchmarks/server.py -O server.py && \
     wget https://raw.githubusercontent.com/asispatra/asisapps/master/benchmarks/client.py -O client.py 
 
-#RUN wget https://raw.githubusercontent.com/asispatra/asisapps/master/benchmarks/init.sh -O init.sh
-COPY ./init.sh .
+RUN wget https://raw.githubusercontent.com/asispatra/asisapps/master/benchmarks/init.sh -O init.sh
+#COPY ./init.sh .
 
 #RUN git clone https://github.com/parthsl/schbench && cd schbench/schbench && make
 #RUN git clone https://github.com/axboe/fio.git && cd fio && ./configure && make && make install
