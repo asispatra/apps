@@ -13,7 +13,7 @@
 
 source helper.sh
 
-MODE=1 # 0: RUN, 1: TEST, 2: DATA COLLECT
+MODE=0 # 0: RUN, 1: TEST, 2: DATA COLLECT
 SLEEP=1
 #JUST_RAN=0 # 1: TRUE, 0: FALSE
 
