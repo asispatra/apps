@@ -4,8 +4,6 @@ FROM registry.access.redhat.com/ubi8/s2i-base
 RUN yum install -y python38 && \
     yum -y clean all --enablerepo='*'
 
-RUN chmod -R 777 .
-
 #RUN wget https://raw.githubusercontent.com/asispatra/asisapps/master/benchmarks/server.py -O server.py && \
 #    wget https://raw.githubusercontent.com/asispatra/asisapps/master/benchmarks/client.py -O client.py 
 
@@ -18,6 +16,7 @@ RUN git clone https://github.com/parthsl/schbench && cd schbench/schbench && mak
 
 #EXPOSE 9999
 
+RUN chown -R default: .
 USER default
 
 ENTRYPOINT [ "bash", "init.sh" ]
