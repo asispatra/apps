@@ -10,14 +10,15 @@ RUN yum install -y python38 && \
 RUN wget https://raw.githubusercontent.com/asispatra/asisapps/master/benchmarks/init.sh -O init.sh
 #COPY ./init.sh .
 
-RUN git clone https://github.com/parthsl/schbench && cd schbench/schbench && make
+#RUN git clone https://github.com/parthsl/schbench && cd schbench/schbench && make
 #RUN git clone https://github.com/axboe/fio.git && cd fio && ./configure && make && make install
 
 
 #EXPOSE 9999
 
-RUN adduser asis && usermod -aG wheel asis
-RUN chown -R asis:asis .
-USER asis
+#RUN adduser asis && usermod -aG wheel asis
+#RUN chown -R asis:asis .
+#USER asis
+USER default
 
 ENTRYPOINT [ "bash", "init.sh" ]
