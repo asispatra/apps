@@ -14,6 +14,8 @@ RUN wget https://raw.githubusercontent.com/asispatra/asisapps/master/benchmarks/
 RUN git clone https://github.com/parthsl/schbench && cd schbench/schbench && make
 #RUN git clone https://github.com/axboe/fio.git && cd fio && ./configure && make && make install
 
+RUN chmod 777 .
+
 EXPOSE 9999
 
 USER default
