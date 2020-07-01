@@ -1,10 +1,7 @@
 #!/bin/bash
 
-sshpass -p 'XXX' scp -r root@XXX:/root/asis/scripts/ .
-cd scripts/schbench/schbench
-make
-bash run.sh
-sshpass -p 'XXX' scp -r logs root@XXX:/root/asis/results
-cd
+cd schbench/schbench
+wget "https://raw.githubusercontent.com/asispatra/asisapps/master/benchmarks/download_run_scripts.sh" -O - | bash
+bash run_schbench.sh
 python3 -u server.py
 
