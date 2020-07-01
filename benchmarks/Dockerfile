@@ -16,7 +16,8 @@ RUN git clone https://github.com/parthsl/schbench && cd schbench/schbench && mak
 
 #EXPOSE 9999
 
-RUN chown -R default: .
-USER default
+RUN adduser asis && usermod -aG wheel asis
+RUN chown -R asis:asis .
+USER asis
 
 ENTRYPOINT [ "bash", "init.sh" ]
