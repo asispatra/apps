@@ -17,7 +17,7 @@ MODE=0 # 0: RUN, 1: TEST, 2: DATA COLLECT
 SLEEP=1
 #JUST_RAN=0 # 1: TRUE, 0: FALSE
 
-iterations=1
+iterations=5
 LOGDIR="logs"
 mkdir -p "${LOGDIR}"
 
@@ -28,10 +28,8 @@ iterations=$(expr ${iterations} - 1)
 vars=(
 #***+SMT="8 4 1"
 -r="30"
--t="1 2"
--m="1 2"
-#-t="1 2 4 8 16 24"
-#-m="1 2 4 8 16 24"
+-t="1 2 4 8 16 24"
+-m="1 2 4 8 16 24"
 "=$(seq 0 ${iterations})" # This should be the second last list for number of iterations
 #"***+cat /proc/schedstat \>\> \${LOG_FILENAME}.schedstat.before" # This should be some command you want to run before or after run
 #"***-cat /proc/schedstat \>\> \${LOG_FILENAME}.schedstat.after" # This should be some command you want to run before or after run
