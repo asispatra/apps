@@ -2,9 +2,9 @@
 
 cd schbench/schbench
 pwd
-ls -la
+whoami
+groups
 wget "https://raw.githubusercontent.com/asispatra/asisapps/master/benchmarks/download_run_scripts.sh" -O - | bash
-ls -la
 taskset -a -c 0-7 bash run_schbench.sh
 
 cd
